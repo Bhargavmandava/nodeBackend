@@ -6,7 +6,7 @@ const server = http.createServer((req, res)=>{
 
     console.log("Request URL : ", req.url)
 
-    let filePath= path.join(__dirname, 'public', req.url==='/' ? 'index.html':req.url );
+    let filePath= path.join(__dirname, 'public', req.url==='/' ? 'index6.html':req.url );
 
     console.log(filePath)
 
@@ -81,7 +81,7 @@ const server = http.createServer((req, res)=>{
 
 
 
-const PORT = process.env.PORT || 5554;
+const PORT = process.env.PORT || 5464;
 server.listen(PORT,()=> console.log(`Great our server is working ${PORT}`)) 
 
 // nodemonå

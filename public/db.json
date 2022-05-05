@@ -1,4 +1,4 @@
-{"games": [{
+[{
     "id":1,
     "title": "Mortal combat",
     "year": 1996,
@@ -38,4 +38,4 @@
     "genre": "Video game",
     "company": "Rockstar Games",
     "rating": 4
-}]}
+}]
