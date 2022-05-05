@@ -44,7 +44,9 @@ const server = http.createServer((req, res)=>{
                             // display the 404 page here
                             fs.readFile(path.join(__dirname,'public','404.html'),(err,content)=>{
                                 res.writeHead(200, {"Content-Type": 'text/html'});
+                                res.setHeader("Access-Control-Allow-Origin", "*")  
                                 res.end(content, 'utf-8')
+
                             });
                                     
                         }
