@@ -42,9 +42,8 @@ const server = http.createServer((req, res)=>{
 
                         if(err.code = 'ENONET'){ // file dont exist 
                             // display the 404 page here
-                            fs.readFile(path.join(__dirname,'public','404.html'),(err,content)=>{
+                            fs.readFile(path.join(__dirname,'public','404.html'),(err,content)=>{ 
                                 res.writeHead(200, {"Content-Type": 'text/html'});
-                                res.setHeader("Access-Control-Allow-Origin", "*")  
                                 res.end(content, 'utf-8')
 
                             });
@@ -58,7 +57,7 @@ const server = http.createServer((req, res)=>{
 
             }else{
                 //sucess
-
+                res.setHeader("Access-Control-Allow-Origin", "*") 
                 res.writeHead(200, {'Content-Type':contentType})
                 res.end(content, 'utf-8')
 
@@ -82,7 +81,7 @@ const server = http.createServer((req, res)=>{
 
 
 
-const PORT = process.env.PORT || 5559;
+const PORT = process.env.PORT || 5554;
 server.listen(PORT,()=> console.log(`Great our server is working ${PORT}`)) 
 
 // nodemonå
